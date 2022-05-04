@@ -11,7 +11,7 @@ const int PLAY_OPTION_POSITION_Y = TITLE_POSITION_Y + 2;
 const int QUIT_OPTION_POSITION_X = TITLE_POSITION_X + 1;
 const int QUIT_OPTION_POSITION_Y = PLAY_OPTION_POSITION_Y + 1;
 
-int renderWelcomeScreen() {
+int drawWelcomeScreen() {
     system("cls");
 
     gotoxy(TITLE_POSITION_X, TITLE_POSITION_Y);
@@ -59,11 +59,11 @@ int input() {
 
             switch (cursorPosition) {
                 case PLAY_OPTION_POSITION_Y:
-                    optionSelected = renderPlayOptionSelected();
+                    optionSelected = drawPlayOptionSelected();
                     break;
 
                 case QUIT_OPTION_POSITION_Y:
-                    optionSelected = renderQuitOptionSelected();
+                    optionSelected = drawQuitOptionSelected();
                     break;
             }
         }
@@ -72,7 +72,7 @@ int input() {
     return optionSelected;
 }
 
-int renderPlayOptionSelected() {
+int drawPlayOptionSelected() {
     gotoxy(PLAY_OPTION_POSITION_X, PLAY_OPTION_POSITION_Y);
     printf("%c PLAY %c", '>', '<');
 
@@ -82,7 +82,7 @@ int renderPlayOptionSelected() {
     return PLAY_OPTION;
 }
 
-int renderQuitOptionSelected() {
+int drawQuitOptionSelected() {
     gotoxy(PLAY_OPTION_POSITION_X, PLAY_OPTION_POSITION_Y);
     printf("%c PLAY %c", ' ', ' ');
 

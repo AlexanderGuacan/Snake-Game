@@ -1,13 +1,12 @@
 #include "HandleConsole.hpp"
 #include "WelcomeScreen.hpp"
-#include <iostream>
 
 int main() {
     setConsoleCursorInvisible();
     bool exit = false;
 
     while (!exit) {
-        switch (renderWelcomeScreen()) {
+        switch (drawWelcomeScreen()) {
             case PLAY_OPTION:
                 // Initialize game
                 break;
