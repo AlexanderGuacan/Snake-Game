@@ -1,7 +1,7 @@
 #ifndef HANDLECONSOLE_HPP
 #define HANDLECONSOLE_HPP
 
-const int LEFT_SPACING = 15;
+const int LEFT_SPACING = 20;
 const int UP_SPACING = 2;
 const int INTERFACE_WIDTH = 75;
 const int INTERFACE_HEIGHT = 25;
