@@ -1,7 +1,6 @@
 #include "HandleConsole.hpp"
 #include "WelcomeScreen.hpp"
-#include "GameInterface.hpp"
-#include <iostream>
+#include "Game.hpp"
 
 int main() {
     setConsoleCursorInvisible();
@@ -10,9 +9,7 @@ int main() {
     while (!exit) {
         switch (drawWelcomeScreen()) {
             case PLAY_OPTION:
-                drawGameInterface();
-                
-                exit = true;
+                startGame();
                 break;
 
             case QUIT_OPTION:

@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <conio.h>
 
-const int TITLE_POSITION_X = INTERFACE_CENTER_X - 4;
+const int TITLE_POSITION_X = INTERFACE_CENTER_X;
 const int TITLE_POSITION_Y = INTERFACE_CENTER_Y - 2;
 const int PLAY_OPTION_POSITION_X = TITLE_POSITION_X + 1;
 const int PLAY_OPTION_POSITION_Y = TITLE_POSITION_Y + 2;
