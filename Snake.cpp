@@ -77,6 +77,16 @@ void Snake::move() {
     Sleep(this->velocity);
 }
 
+bool Snake::hasEating(Food food) {
+    bool eat = this->position.X == food.getPosition().X && this->position.Y == food.getPosition().Y;
+
+    if (eat) {
+        this->score++;
+    }
+
+    return eat;
+}
+
 bool Snake::hasCollidedWithWall() {
     bool collidDetected = false;
 

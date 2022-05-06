@@ -2,6 +2,7 @@
 #define SNAKE_HPP
 
 #include <windows.h>
+#include "Food.hpp"
 
 class Snake {
     COORD position;
@@ -21,6 +22,7 @@ class Snake {
         void erase();
         void draw();
         void move();
+        bool hasEating(Food food);
         bool hasCollidedWithWall();
 };
 
