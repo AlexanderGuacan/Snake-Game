@@ -2,7 +2,7 @@
 #include "GameInterface.hpp"
 #include "Snake.hpp"
 
-Snake snake = Snake();
+Snake snake = Snake(8);
 
 void startGame() {
     drawGameInterface();

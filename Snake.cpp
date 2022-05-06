@@ -3,7 +3,8 @@
 #include <cstdio>
 #include <conio.h>
 
-Snake::Snake() {
+Snake::Snake(int velocity) {
+    setVelocity(velocity);
     this->position.X = INTERFACE_CENTER_X;
     this->position.Y = INTERFACE_CENTER_Y;
     this->score = 0;
@@ -11,6 +12,15 @@ Snake::Snake() {
 
 int Snake::getScore() {
     return this->score;
+}
+
+void Snake::setVelocity(int velocity) {
+    if (velocity >= 1 && velocity <= 10) {
+        this->velocity = (-200 / 9 * velocity) + (2450 /9);
+    } else {
+        velocity = 5;
+        this->velocity = (-200 / 9 * velocity) + (2450 /9);
+    }
 }
 
 void Snake::erase() {
@@ -52,5 +62,5 @@ void Snake::move() {
     }
 
     draw();
-    Sleep(150);
+    Sleep(this->velocity);
 }
