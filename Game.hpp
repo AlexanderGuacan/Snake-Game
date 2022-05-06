@@ -2,6 +2,6 @@
 #define GAME_HPP
 
 void startGame();
-void gameLogic();
+bool gameLogic();
 
 #endif

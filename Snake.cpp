@@ -5,13 +5,25 @@
 
 Snake::Snake(int velocity) {
     setVelocity(velocity);
-    this->position.X = INTERFACE_CENTER_X;
-    this->position.Y = INTERFACE_CENTER_Y;
-    this->score = 0;
+    setDefaultProperties();
 }
 
 int Snake::getScore() {
     return this->score;
+}
+
+void Snake::setDefaultPosition() {
+    this->position.X = INTERFACE_CENTER_X;
+    this->position.Y = INTERFACE_CENTER_Y;
+}
+
+void Snake::setDefaultScore() {
+    this->score = 0;
+}
+
+void Snake::setDefaultProperties() {
+    setDefaultPosition();
+    setDefaultScore();
 }
 
 void Snake::setVelocity(int velocity) {
@@ -63,4 +75,13 @@ void Snake::move() {
 
     draw();
     Sleep(this->velocity);
+}
+
+bool Snake::hasCollidedWithWall() {
+    bool collidDetected = false;
+
+    collidDetected = this->position.X <= LEFT_SPACING || this->position.X >= LEFT_SPACING + INTERFACE_WIDTH
+    || this->position.Y <= UP_SPACING || this->position.Y >= UP_SPACING + INTERFACE_HEIGHT;
+
+    return collidDetected;
 }

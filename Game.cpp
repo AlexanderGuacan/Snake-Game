@@ -9,10 +9,14 @@ void startGame() {
 
     bool gameOver = false;
     while (!gameOver) {
-        gameLogic();
+        gameOver = gameLogic();
     }
+
+    snake.setDefaultProperties();
 }
 
-void gameLogic() {
+bool gameLogic() {
     snake.move();
+
+    return snake.hasCollidedWithWall();
 }

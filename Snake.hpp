@@ -15,9 +15,13 @@ class Snake {
     public:
         Snake(int velocity);
         int getScore();
+        void setDefaultPosition();
+        void setDefaultScore();
+        void setDefaultProperties();
         void erase();
         void draw();
         void move();
+        bool hasCollidedWithWall();
 };
 
 #endif
